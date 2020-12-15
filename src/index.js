@@ -83,7 +83,7 @@ app.get('/hotspotStates', async (req, res) => {
 })
 
 app.get('/healthyStates', async (req, res) => {
-    const resDoc = await covidTallyModel.aggregate([
+    const resultDoc = await covidTallyModel.aggregate([
         {
             $project: {
                 state: "$state",
